@@ -16,7 +16,7 @@ function ItemList({ count = "16" }) {
 
   return (
     <div className="mt-5">
-      <Row xs="2" lg="4">
+      <Row xs="1" sm="2" md="3" lg="4">
         {items}
       </Row>
     </div>

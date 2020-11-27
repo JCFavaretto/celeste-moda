@@ -1,102 +1,51 @@
-import React, { useState } from "react";
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  Container,
-} from "reactstrap";
-import ItemList from "./ItemList";
+import React from "react";
+import Slider from "react-slick";
+import Item from "./Item";
 
-const items = [
-  {
-    src:
-      "https://firebasestorage.googleapis.com/v0/b/celeste-moda.appspot.com/o/Conjunto1.png?alt=media&token=1100c4bb-8d80-4b82-8aa5-2097dd32d6df",
+export default function SimpleSlider() {
+  const items = [];
 
-    altText: "Conjunto 1",
-    caption: "Conjunto 1",
-  },
-  {
-    src:
-      "https://firebasestorage.googleapis.com/v0/b/celeste-moda.appspot.com/o/Conjunto2.png?alt=media&token=94beb337-f678-4614-a510-fc8258f9b8d7",
-    altText: "Conjunto 2",
-    caption: "Conjunto 2",
-  },
-  {
-    src:
-      "https://firebasestorage.googleapis.com/v0/b/celeste-moda.appspot.com/o/Conjunto3.png?alt=media&token=33d04916-344f-4c7c-af10-41d001ba8323",
-    altText: "Conjunto 3",
-    caption: "Conjunto 3",
-  },
-  {
-    src:
-      "https://firebasestorage.googleapis.com/v0/b/celeste-moda.appspot.com/o/Revendedoras.png?alt=media&token=83a20556-88e4-49d2-88ae-4bbd662ac04e",
-    altText: "Revendedores",
-    caption: "Revendedores",
-  },
-];
-
-const Slider = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
-
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
-  };
-
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
-  };
-
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  };
-
-  const slides = items.map((item) => {
-    console.log(item);
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <ItemList count={4} />
-      </CarouselItem>
+  for (let i = 0; i < 10; i++) {
+    items.push(
+      <div style={{ marginRight: "10px" }}>
+        <Item />
+      </div>
     );
-  });
+  }
 
-  return (
-    <Container>
-      <Carousel
-        className="mt-2"
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-      >
-        <CarouselIndicators
-          items={items}
-          activeIndex={activeIndex}
-          onClickHandler={goToIndex}
-        />
-        {slides}
-        <CarouselControl
-          direction="prev"
-          directionText="Previous"
-          onClickHandler={previous}
-        />
-        <CarouselControl
-          direction="next"
-          directionText="Next"
-          onClickHandler={next}
-        />
-      </Carousel>
-    </Container>
-  );
-};
-
-export default Slider;
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 760,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  return <Slider {...settings}>{items}</Slider>;
+}

@@ -1,4 +1,3 @@
-import ItemList from "components/ItemList";
 import Slider from "components/Slider";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -15,7 +14,7 @@ function Home() {
           height="300px"
         />
       </Link>
-      <Container className="jumbotron">
+      <Container className="">
         <h3>Nuestros destacados</h3>
         <Slider />
       </Container>

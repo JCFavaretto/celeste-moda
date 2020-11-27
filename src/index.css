@@ -1,14 +1,9 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 
 /* Layout Content */
@@ -20,15 +15,23 @@ code {
 /* components/Footer */
 .footer {
   height: 5rem;
-  background-color: #78C2AD;
+  background-color: var(--primary);
   color: white;
   text-align: center;
   margin-top: 2rem;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1);
-  padding: 1rem;
-  background-color: white;
+
+
+/* Slick carousel */
+.slick-prev:before,
+.slick-next:before {
+  font-size: 1.5rem !important;
+  color: var(--secondary) !important;
+  z-index: 5 !important;
+}
+
+
+.slick-active button::before {
+  color: var(--secondary) !important;
 }
