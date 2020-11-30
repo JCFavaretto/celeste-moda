@@ -5,7 +5,7 @@ import { Container } from "reactstrap";
 
 function Home() {
   return (
-    <>
+    <div className="jumbotron">
       <Link to="/contact">
         <img
           src="https://firebasestorage.googleapis.com/v0/b/celeste-moda.appspot.com/o/Revendedoras.png?alt=media&token=83a20556-88e4-49d2-88ae-4bbd662ac04e"
@@ -18,7 +18,7 @@ function Home() {
         <h3>Nuestros destacados</h3>
         <Slider />
       </Container>
-    </>
+    </div>
   );
 }
 

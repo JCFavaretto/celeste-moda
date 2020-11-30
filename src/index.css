@@ -4,7 +4,10 @@ body {
 
 }
 
-
+.dropdown-menu a:hover {
+  color: white;
+  text-decoration: none;
+}
 
 /* Layout Content */
 .content {

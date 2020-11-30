@@ -22,7 +22,7 @@ export default function SimpleSlider() {
     pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 900,
+        breakpoint: 998,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -36,13 +36,6 @@ export default function SimpleSlider() {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 500,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
     ],
