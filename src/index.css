@@ -4,10 +4,65 @@ body {
 
 }
 
-.dropdown-menu a:hover {
+/* Bootstrap styles */
+.dropdown-menu {
+  text-align: center;
+}
+
+.dropdown-menu a {
   color: white;
+}
+
+.dropdown-menu a:hover {
   text-decoration: none;
 }
+
+.jumbotron {
+  padding-top: 2rem;
+}
+
+.card {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+/* components/Header */
+
+.cart-icon {
+  color: rgba(255, 255, 255, .6);
+  padding: .25rem .75rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: .4rem;
+  font-size: 1.8rem;
+}
+
+.cart-icon:hover {
+  cursor: pointer;
+  color: white
+}
+
+.cart-icon:focus {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .cart-icon {
+    position: fixed;
+    top: 0.5rem;
+    right: 5.5rem;
+  }
+}
+
+@media (min-width: 1199px) {
+  .cart-icon {
+    right: 15rem;
+  }
+}
+
 
 /* Layout Content */
 .content {
@@ -23,6 +78,7 @@ body {
   text-align: center;
   margin-top: 2rem;
 }
+
 
 
 
