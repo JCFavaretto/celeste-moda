@@ -8,6 +8,7 @@ function Error404() {
         style={{
           borderBottom: "1px solid var(--secondary)",
           widht: "90px",
+          marginBottom: "1rem",
         }}
       ></div>
       <h4>La pagina no existe.</h4>

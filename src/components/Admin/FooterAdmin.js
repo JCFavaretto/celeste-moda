@@ -1,9 +1,9 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
 
-const Footer = () => {
+function FooterAdmin() {
   return (
-    <div className="footer ">
+    <div className="footer footer-admin">
       <Container>
         <Row xs="1" md="3">
           <Col>Nosotros</Col>
@@ -13,6 +13,6 @@ const Footer = () => {
       </Container>
     </div>
   );
-};
+}
 
-export default Footer;
+export default FooterAdmin;

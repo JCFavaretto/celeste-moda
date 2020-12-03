@@ -7,7 +7,7 @@ export default function SimpleSlider() {
 
   for (let i = 0; i < 10; i++) {
     items.push(
-      <div style={{ marginRight: "10px" }}>
+      <div key={i} style={{ marginRight: "10px" }}>
         <Item />
       </div>
     );

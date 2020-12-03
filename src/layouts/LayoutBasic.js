@@ -8,6 +8,7 @@ function LayoutBasic({ routes }) {
   return (
     <>
       <Header />
+
       <Container className="content">
         <Row>
           <Col>

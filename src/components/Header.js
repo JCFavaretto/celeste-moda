@@ -6,7 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  Dropdown,
+  UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
@@ -20,9 +20,6 @@ const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => setCollapsed(!collapsed);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const toggle = () => setDropdownOpen((prevState) => !prevState);
 
   const [modal, setModal] = useState(false);
 
@@ -41,7 +38,7 @@ const Header = () => {
         <Cart modal={modal} toggleModal={toggleModal} />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar className="ml-5">
-            <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+            <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Productos
               </DropdownToggle>
@@ -82,7 +79,7 @@ const Header = () => {
                   </Link>
                 </DropdownItem>
               </DropdownMenu>
-            </Dropdown>
+            </UncontrolledDropdown>
             <NavItem>
               <NavLink href="/contactus" onClick={toggleNavbar}>
                 Nosotros
