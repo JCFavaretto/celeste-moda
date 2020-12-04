@@ -3,7 +3,7 @@ import LayoutAdmin from "layouts/LayoutAdmin";
 import LayoutBasic from "layouts/LayoutBasic";
 
 // Admin Pages
-import AddItem from "components/Admin/AddItem";
+import AddItem from "pages/Admin/AddItem";
 
 // Pages
 import Home from "pages/Home";

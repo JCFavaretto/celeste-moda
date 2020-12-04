@@ -1,5 +1,5 @@
 import Banner from "components/Banner";
-import Slider from "components/Slider";
+import ItemCarousel from "components/ItemCarousel";
 import React from "react";
 import { Container } from "reactstrap";
 
@@ -15,7 +15,7 @@ function Home() {
         }}
       >
         <h3>Nuestros destacados</h3>
-        <Slider />
+        <ItemCarousel />
       </Container>
     </div>
   );

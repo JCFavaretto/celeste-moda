@@ -98,19 +98,6 @@ body {
 
 
 
-/* Slick carousel */
-.slick-prev:before,
-.slick-next:before {
-  font-size: 1.5rem !important;
-  color: var(--secondary) !important;
-  z-index: 5 !important;
-}
-
-
-.slick-active button::before {
-  color: var(--secondary) !important;
-}
-
 /* Admin */
 
 /* Admin Header */
@@ -132,4 +119,5 @@ body {
 /* Admin Footer */
 .footer-admin {
   background-color: var(--info);
+  color: #5a5a5a;
 }

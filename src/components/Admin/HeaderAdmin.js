@@ -9,7 +9,6 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-import MenuSider from "./MenuSider";
 
 const HeaderAdmin = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -17,7 +16,7 @@ const HeaderAdmin = () => {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <Navbar color="info" dark fixed="top">
+    <Navbar color="info" light fixed="top">
       <Container>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <NavbarBrand href="/admin" className="mr-auto">
