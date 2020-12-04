@@ -9,6 +9,7 @@
     "bootstrap": "^4.5.3",
     "browserlist": "^1.0.1",
     "caniuse-lite": "^1.0.30001164",
+    "dotenv": "^8.2.0",
     "firebase": "^8.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

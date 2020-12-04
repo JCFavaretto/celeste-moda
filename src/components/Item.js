@@ -11,7 +11,7 @@ import {
 const Item = () => {
   return (
     <>
-      <Card className="border-secondary mb-2">
+      <Card style={{ marginBottom: "2rem" }} className="border-secondary mb-2">
         <CardImg
           top
           width="100%"

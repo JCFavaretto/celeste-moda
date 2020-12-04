@@ -4,7 +4,7 @@ import { Container } from "reactstrap";
 
 function Products() {
   return (
-    <Container className="jumbotron">
+    <Container className="jumbotron ">
       <h2>Nuestros Productos</h2>
       <div
         style={{
