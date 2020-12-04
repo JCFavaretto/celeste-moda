@@ -8,7 +8,7 @@ import {
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import Item from "components/Item";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 import useWindowDimensions from "hooks/useWindowDimensions";
 
 const ItemCarousel = () => {
@@ -28,8 +28,16 @@ const ItemCarousel = () => {
       return 4;
     } else if (width > 768) {
       return 3;
-    } else if (width > 576) {
-      return 2.5;
+    } else if (width > 468) {
+      return 2;
+    } else {
+      return 1;
+    }
+  };
+
+  const calculateHeight = () => {
+    if (width < 468) {
+      return 1.3;
     } else {
       return 2;
     }
@@ -39,7 +47,7 @@ const ItemCarousel = () => {
     <CarouselProvider
       className="item-carousel"
       naturalSlideWidth={1}
-      naturalSlideHeight={2}
+      naturalSlideHeight={calculateHeight()}
       totalSlides={items.length + 1}
       visibleSlides={calculateSlides()}
       infinite={true}
@@ -47,7 +55,7 @@ const ItemCarousel = () => {
       interval={2500}
     >
       <Slider>{items}</Slider>
-      <Row>
+      <Row style={calculateSlides() === 1 ? { display: "none" } : {}}>
         <Col xs="2">
           <ButtonBack className="btn btn-secondary">Back</ButtonBack>
         </Col>
